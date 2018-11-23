@@ -2,6 +2,12 @@ package com.shpp.p2p.cs.bbohatov.assignment1;
 
 import com.shpp.cs.a.console.TextProgram;
 
+import java.math.BigDecimal;
+
+/**
+ * Class asks user input 3 numbers, first number must not be zero
+ * After user put three numbers class solve quadratic equation
+ */
 public class Assignment2Part1 extends TextProgram {
     @Override
     public void run() {
@@ -21,6 +27,7 @@ public class Assignment2Part1 extends TextProgram {
 
     /**
      * Method returns first root
+     *
      * @param a - first coefficient
      * @param b - second coefficient
      * @param discriminant - discriminant
@@ -31,7 +38,8 @@ public class Assignment2Part1 extends TextProgram {
     }
 
     /**
-     * Method returns first root
+     * Method returns second root
+     *
      * @param a - first coefficient
      * @param b - second coefficient
      * @param discriminant - discriminant
@@ -42,7 +50,8 @@ public class Assignment2Part1 extends TextProgram {
     }
 
     /**
-     * Method locking for a discriminant, needs for Quadratic equation
+     * Method locking for a discriminant that needs for quadratic equation
+     *
      * @param a - first number cant be zero, can be positive or negative
      * @param b - second number can be positive, negative and zero
      * @param c - third number can be positive, negative and zero
@@ -54,13 +63,16 @@ public class Assignment2Part1 extends TextProgram {
 
     /**
      *
-     * @param input
-     * @return
+     * @param input - users string
+     * @return - return
      */
     private double askUserNumber(String input) {
         System.out.println(input + " number please");
         String s = readLine();
         if (checkNumberCanBeZero(s)) {
+            if (new BigDecimal(s).compareTo(BigDecimal.valueOf(Double.MAX_VALUE)) >= 0) {
+                return askUserNumber("Enter valid double");
+            }
             return Double.valueOf(s);
         } else {
             return askUserNumber("Enter valid");
@@ -77,9 +89,11 @@ public class Assignment2Part1 extends TextProgram {
         System.out.println(string + " number please");
         String s = readLine();
         if (checkNumber(s)) {
+            if (new BigDecimal(s).compareTo(BigDecimal.valueOf(Double.MAX_VALUE)) >= 0) {
+                return askFirstNumber("Enter valid double");
+            }
             return Double.valueOf(s);
         } else {
-
             return askFirstNumber("Enter valid");
         }
     }
@@ -93,6 +107,8 @@ public class Assignment2Part1 extends TextProgram {
     }
 
     /**
+     * Method checks if inputted string can be a number
+     *
      * @param str - input value which need check, is it number or not
      * @return - if input string str can bee number return true, other case - false
      */
