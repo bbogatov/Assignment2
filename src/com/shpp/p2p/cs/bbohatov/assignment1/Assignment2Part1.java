@@ -11,8 +11,8 @@ import java.math.BigDecimal;
 public class Assignment2Part1 extends TextProgram {
     @Override
     public void run() {
-        System.out.print("Hello, ");
-        double firstNumber = askFirstNumber("enter first");
+        System.out.print("Hello, welcome to quadratic factorization solving program");
+        double firstNumber = askFirstNumber("\nEnter first");
         double secondNumber = askUserNumber("Enter second");
         double thirdNumber = askUserNumber("Enter third");
         double discriminant = discriminant(firstNumber, secondNumber, thirdNumber);
@@ -99,6 +99,8 @@ public class Assignment2Part1 extends TextProgram {
     }
 
     /**
+     * Method checks inputted string can it be a number including zero
+     *
      * @param str - input value which need check, is it number or not
      * @return - if input string str can bee number return true, other case - false
      */
@@ -107,7 +109,7 @@ public class Assignment2Part1 extends TextProgram {
     }
 
     /**
-     * Method checks if inputted string can be a number
+     * Method checks if inputted string can be a number, number can't be a zero
      *
      * @param str - input value which need check, is it number or not
      * @return - if input string str can bee number return true, other case - false

@@ -10,9 +10,16 @@ import java.awt.*;
  * Class creates frame with a flag of Belgium in a center, and a text in right bottom corner "Flag of Belgium"
  */
 public class Assignment2Part4 extends WindowProgram {
+    /**
+     * Dimension of a rectangles of which contains flag
+     */
     private static final double RECTANGLE_WIDTH = 100;
     private static final double RECTANGLE_HEIGHT = 250;
 
+    /**
+     * The default width and height of the window. These constants will tell Java to
+     * create a window whose size is *approximately* given by these dimensions.
+     */
     public static final int APPLICATION_WIDTH = 600;
     public static final int APPLICATION_HEIGHT = 450;
 
@@ -67,7 +74,8 @@ public class Assignment2Part4 extends WindowProgram {
      */
     GRect drawColorRectangle(double xCoordinate, double yCoordinate, double width, double height, Color color) {
         GRect rect = new GRect(xCoordinate, yCoordinate, width, height);
-        rect.setColor(color);
+        rect.setFillColor(color);
+        rect.setColor(Color.BLACK);
         rect.setFilled(true);
         add(rect);
         return rect;

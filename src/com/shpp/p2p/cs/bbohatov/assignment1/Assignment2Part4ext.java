@@ -5,6 +5,9 @@ import acm.graphics.GObject;
 import java.awt.*;
 import java.util.ArrayList;
 
+/**
+ * Class creates animation of countries that have 3 color in their flags
+ */
 public class Assignment2Part4ext extends Assignment2Part4 {
     private static final double RECTANGLE_WIDTH = 100;
     private static final double RECTANGLE_HEIGHT = 250;
@@ -16,9 +19,7 @@ public class Assignment2Part4ext extends Assignment2Part4 {
 
     @Override
     public void run() {
-
         ArrayList<tricolorCountry> countries = tricolorCounties();
-
         while (true) {
             for (int i = 0; i < countries.size(); i++) {
                 drawTricolorFlag(

@@ -19,7 +19,6 @@ public class Assignment2Part2 extends WindowProgram {
         add(drawRectangleOverOvals(OVAL_DIAMETER));
     }
 
-
     /**
      * Precondition: empty frame
      * Method creates a black Oval with in inputted parameters, with inputted size
@@ -39,7 +38,8 @@ public class Assignment2Part2 extends WindowProgram {
 
     /**
      * Precondition: empty window
-     * Result: window has 4 black ovals on each corner
+     * Result: window has 4 black ovals in each corner
+     *
      * @param ovalDiameter - diameter of oval that need to create in frame
      */
     private void drawFourOvalsOnCorners(int ovalDiameter) {
